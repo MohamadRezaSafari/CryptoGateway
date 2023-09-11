@@ -1,16 +1,16 @@
 ﻿{
-    "Routes": [
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Log",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
         {
-            "DownstreamPathTemplate": "/api/Log",
-            "DownstreamScheme": "https",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "localhost",
-                    "Port": 7181
-                }
-            ],
-            "UpstreamPathTemplate": "/Gateway/Log",
-            "UpstreamHttpMethod": ["Get", "Post"]
+          "Host": "localhost",
+          "Port": 7173
         }
-    ]
+      ],
+      "UpstreamPathTemplate": "/api/Log",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ]
 }
