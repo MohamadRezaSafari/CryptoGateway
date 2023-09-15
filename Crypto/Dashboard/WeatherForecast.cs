@@ -1,4 +1,4 @@
-namespace Log
+namespace Dashboard
 {
     public class WeatherForecast
     {

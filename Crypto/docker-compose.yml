@@ -1,0 +1,60 @@
+version: '3.4'
+
+networks:
+  backend:
+
+services:
+   orderdb:
+    container_name: order-db
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - 18001:1433
+    networks:
+      - backend
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=V_f=^t%Fam!2GZ%
+
+   order:
+    container_name: order
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: Order/Dockerfile
+    networks:
+      - backend
+    environment:
+        - DB_HOST=orderdb
+        - DB_NAME=dms_order
+        - DB_ROOT_PASSWORD=V_f=^t%Fam!2GZ%
+
+   dashboarddb:
+    container_name: dashboard-db
+    image: mongo:latest
+    ports:
+      - 18005:27017
+    networks:
+      - backend
+
+   dashboard:
+    container_name: dashboard
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+        context: .
+        dockerfile: Dashboard/Dockerfile
+    networks:
+        - backend
+    environment:
+        - DB_HOST=dashboarddb
+        - DB_NAME=dms_dashboard
+
+   apigateway:
+    container_name: api-gateway
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/Dockerfile
+    ports:
+      - 8001:80
+    networks:
+      - backend

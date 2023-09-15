@@ -1,0 +1,55 @@
+{
+    "Routes": [
+        {
+            "UpstreamPathTemplate": "/api/dashboard",
+            "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "dashboard",
+                    "Port": 80
+                }
+            ],
+            "DownstreamPathTemplate": "/api/dashboard"
+        },
+        {
+            "UpstreamPathTemplate": "/api/dashboard/{id}",
+            "UpstreamHttpMethod": [ "Get", "Delete" ],
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "dashboard",
+                    "Port": 80
+                }
+            ],
+            "DownstreamPathTemplate": "/api/dashboard/{id}"
+        },
+        {
+            "UpstreamPathTemplate": "/api/orders",
+            "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "order",
+                    "Port": 80
+                }
+            ],
+            "DownstreamPathTemplate": "/api/orders"
+        },
+        {
+            "UpstreamPathTemplate": "/api/orders/{id}",
+            "UpstreamHttpMethod": [ "Get", "Delete" ],
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "order",
+                    "Port": 80
+                }
+            ],
+            "DownstreamPathTemplate": "/api/orders/{id}"
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "localhost:800"
+    }
+}

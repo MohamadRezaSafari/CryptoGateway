@@ -2,39 +2,39 @@
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace Log.Controllers
+namespace Order.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LogController : ControllerBase
+    public class OrdersController : ControllerBase
     {
-        // GET: api/<LogController>
+        // GET: api/<OrdersController>
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { $"Your log created at {DateTime.Now}", "Log service!" };
+            return new string[] { "order 1", "order 2" };
         }
 
-        // GET api/<LogController>/5
+        // GET api/<OrdersController>/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+            return $"value order {id}";
         }
 
-        // POST api/<LogController>
+        // POST api/<OrdersController>
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/<LogController>/5
+        // PUT api/<OrdersController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<LogController>/5
+        // DELETE api/<OrdersController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
