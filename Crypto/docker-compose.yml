@@ -17,16 +17,15 @@ services:
 
    order:
     container_name: order
-    image: ${DOCKER_REGISTRY-}apigateway
+    image: ${DOCKER_REGISTRY-}order
     build:
       context: .
       dockerfile: Order/Dockerfile
     networks:
-      - backend
+        - backend
     environment:
         - DB_HOST=orderdb
         - DB_NAME=dms_order
-        - DB_ROOT_PASSWORD=V_f=^t%Fam!2GZ%
 
    dashboarddb:
     container_name: dashboard-db
@@ -38,7 +37,7 @@ services:
 
    dashboard:
     container_name: dashboard
-    image: ${DOCKER_REGISTRY-}apigateway
+    image: ${DOCKER_REGISTRY-}dashboard
     build:
         context: .
         dockerfile: Dashboard/Dockerfile
