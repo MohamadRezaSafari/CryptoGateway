@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Steam", "Steam\Steam.csproj", "{9C9F757A-CC2F-4A5B-B109-9F131B6DD7FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stream", "Stream\Stream.csproj", "{449A17E9-6DA4-42E7-9B47-46F38B0DA1DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9C9F757A-CC2F-4A5B-B109-9F131B6DD7FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C9F757A-CC2F-4A5B-B109-9F131B6DD7FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C9F757A-CC2F-4A5B-B109-9F131B6DD7FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C9F757A-CC2F-4A5B-B109-9F131B6DD7FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{449A17E9-6DA4-42E7-9B47-46F38B0DA1DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{449A17E9-6DA4-42E7-9B47-46F38B0DA1DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{449A17E9-6DA4-42E7-9B47-46F38B0DA1DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{449A17E9-6DA4-42E7-9B47-46F38B0DA1DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {74B0DEFF-E5E3-4A8C-9848-8A0EEA35AEA3}
+		SolutionGuid = {DF86900C-3617-4F1A-935A-87808494499B}
 	EndGlobalSection
 EndGlobal
